@@ -26,6 +26,11 @@
 \RequirePackage{fontspec}   % Requires XeLaTeX
 \RequirePackage{xeCJK}      % CJK support
 \tcbuselibrary{skins,breakable}
+\RequirePackage{anyfontsize}
+\RequirePackage{shortvrb}
+\MakeShortVerb\"
+\RequirePackage{hologo}
+\providecommand \pkg \textsf
 
 %% ========== Fonts ==========
 \setmainfont{Times New Roman}
@@ -75,7 +80,10 @@
 \fancyhf{}
 \fancyfoot[L]{%
   {\footnotesize\color{rubbishgreen}\textit{Rubbish}\,}%
-  {\footnotesize| Volume XX | February 2026 | XXXX}%
+  {\footnotesize| Volume XX | \ifcase \month \or
+    January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December%
+    \fi \space \number \year\ | XXXX}%
 }
 \fancyfoot[R]{\footnotesize\textbf{PAGE \thepage}}
 \renewcommand{\headrulewidth}{0pt}
