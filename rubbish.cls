@@ -23,8 +23,7 @@
 \RequirePackage{indentfirst}
 \RequirePackage{booktabs}
 \RequirePackage{listings}
-\RequirePackage{fontspec}   % Requires XeLaTeX
-\RequirePackage{xeCJK}      % CJK support
+\RequirePackage[scheme = plain]{ctex}      % CJK support
 \tcbuselibrary{skins,breakable}
 \RequirePackage{anyfontsize}
 \RequirePackage{shortvrb}
