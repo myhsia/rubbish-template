@@ -20,6 +20,8 @@
 \RequirePackage{enumitem}
 \RequirePackage{float}
 \RequirePackage{caption}
+\captionsetup[table]{hypcap=false}
+\captionsetup[figure]{hypcap=false}
 \RequirePackage{indentfirst}
 \RequirePackage{booktabs}
 \RequirePackage{listings}
@@ -33,13 +35,9 @@
 
 %% ========== Fonts ==========
 \setmainfont{Times New Roman}
-\newfontfamily\bodyfont{Baskerville}[
-  ItalicFont=Baskerville-Italic,
-  BoldFont=Baskerville-Bold,
-]                                            % macOS built-in; Overleaf: use TeX Gyre Pagella
-\newfontfamily\georgiafont{Georgia}
-\setCJKmainfont{PingFang SC}      % macOS default; SimSun (Windows), Noto Serif CJK SC (Linux)
-\setCJKmonofont{PingFang SC}     % Suppress xeCJK monofont warning
+\newfontfamily\bodyfont{BaskervilleF-Regular}[Extension = .otf,
+  BoldFont   = BaskervilleF-Bold, BoldItalicFont = BaskervilleF-Bold,
+  ItalicFont = BaskervilleF-BoldItalic,]
 
 %% ========== Page Geometry ==========
 \geometry{
@@ -226,5 +224,7 @@
 }{%
   \end{multicols}
 }
+
+\newcommand \mail[1]{\href{mailto:#1}{\underline{#1}}}
 
 \endinput

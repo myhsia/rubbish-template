@@ -14,21 +14,20 @@
 %% --- Authors ---
 %%   Superscript numbers link to affiliations.
 %%   * = corresponding author, † = equal contribution.
-\rubbishauthors{
-  First Author\textsuperscript{1,*,$\dagger$},
-  Second Author\textsuperscript{2,$\dagger$},
+\rubbishauthors{%
+  First Author\textsuperscript{1,*,\dag},
+  Second Author\textsuperscript{2,\dag},
   Third Author\textsuperscript{2}
   and Fourth Author\textsuperscript{2,*}
 }
 
 %% --- Affiliations (appear below author names) ---
-\rubbishaffiliations{
-  \textsuperscript{1}First Institution
+\rubbishaffiliations{%
+  \makebox[1ex][r]{\textsuperscript{1}}First Institution
   and \textsuperscript{2}Second Institution\\[1pt]
-  \textsuperscript{*}\,\georgiafont
-    \href{mailto:abc@uni.edu}{\underline{abc@uni.edu}};
-    \href{mailto:alphbeta@lab.edu}{\underline{alphbeta@lab.edu}}\\[1pt]
-  \textsuperscript{$\dagger$}Contributed equally.
+  \makebox[1ex][r]{\textsuperscript{*}}%
+    \mail{abc@uni.edu}; \mail{alphbeta@lab.edu}\\[1pt]
+  \makebox[1ex][r]{\textsuperscript{\dag}}Contributed equally.
 }
 
 %% --- Keywords ---
